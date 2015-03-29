@@ -24,7 +24,7 @@ Outputs:
 Example use:
 
     module "ami" {
-      source = "bobtfish/terraform-ubuntu-ami"
+      source = "github.com/bobtfish/terraform-ubuntu-ami"
       region = "eu-central-1"
       distribution = "trusty"
       architecture = "amd64"
