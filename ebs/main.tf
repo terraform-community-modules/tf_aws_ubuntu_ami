@@ -11,6 +11,7 @@ module "virttype" {
 }
 
 module "ami" {
+    region = "${var.region}"
     distribution = "${var.distribution}"
     architecture = "${var.architecture}"
     virttype = "${module.virttype.prefer_hvm}"
