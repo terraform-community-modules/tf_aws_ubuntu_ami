@@ -11,6 +11,7 @@ module "virttype" {
 }
 
 module "ami" {
+    distribution = "${var.distribution}"
     architecture = "${var.architecture}"
     virttype = "${module.virttype.prefer_hvm}"
     storagetype = "ebs"
