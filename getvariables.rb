@@ -3,7 +3,7 @@ require 'net/https'
 require 'json'
 
 
-uri = URI.parse("http://cloud-images.ubuntu.com/locator/ec2/releasesTable")
+uri = URI.parse("https://cloud-images.ubuntu.com/locator/ec2/releasesTable")
 http = Net::HTTP.new(uri.host, uri.port)
 request = Net::HTTP::Get.new(uri.request_uri)
 

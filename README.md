@@ -5,7 +5,7 @@ Terraform module to get the current set of publicly available ubuntu AMIs.
 
 This module grabs all of the AMIs listed at:
 
-    http://cloud-images.ubuntu.com/locator/ec2/
+    https://cloud-images.ubuntu.com/locator/ec2/
 
 and then looks up the one you want given the input variables
 
