@@ -1,4 +1,4 @@
-.PHONEY: all
+.PHONY: all
 
 all: variables.tf.json
 
