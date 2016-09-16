@@ -1,9 +1,13 @@
 variable "region" {}
 variable "distribution" {}
 variable "architecture" {
-  default = "amd64"
+    default = "amd64"
 }
 variable "instance_type" {}
+variable "storagetype" {
+    default = "ebs"
+    description = "storage type for EBS volumes. Choose 'ebs', 'ebs-ssd', or 'ebs-io1'"
+}
 
 module "virttype" {
     source = "github.com/terraform-community-modules/tf_aws_virttype"
@@ -15,7 +19,7 @@ module "ami" {
     distribution = "${var.distribution}"
     architecture = "${var.architecture}"
     virttype = "${module.virttype.prefer_hvm}"
-    storagetype = "ebs"
+    storagetype = "${var.storagetype}"
     source = "../"
 }
 
